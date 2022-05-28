@@ -20,7 +20,7 @@
     Copy</a>
     </button>
 
-        - alternatively: drag the button bookmark bar if you use one.
+        - alternatively: drag the button to the bookmark bar if you use one.
 
 
 
