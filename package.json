@@ -1,0 +1,25 @@
+{
+  "name": "knust-assessment",
+  "version": "1.0.0",
+  "description": "lazy fill",
+  "main": "assessment.js",
+  "dependencies": {
+    "bookmarklet": "^3.0.0",
+    "eslint": "^8.16.0",
+    "uglify-js": "^3.15.5"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.17.10",
+    "@babel/core": "^7.18.2",
+    "@babel/preset-env": "^7.18.2"
+  },
+  "scripts": {
+    "uglify": "uglifyjs assessment.js -c drop_console=true -m -o ./dist/assess.min.js",
+    "build": "babel assessment.js -d lib/babel.js",
+    "bookmark": "bash ./build.sh",
+    "bookmarklet": "bookmarklet ./dist/assess.min.js ./dist/bookmarklet.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Lazarus",
+  "license": "ISC"
+}
