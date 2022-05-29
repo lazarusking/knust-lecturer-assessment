@@ -1,6 +1,6 @@
 const lecturers = document.querySelectorAll("tr[data-coursecode]");
 
-assessLecturer(lecturers); 
+assessLecturer(lecturers);
 
 
 
@@ -55,12 +55,12 @@ async function assessLecturer(listOfLecturers) {
 	return new Promise(function (resolve, reject) {
 		//do stuff
 		try {
-			for(const i of listOfLecturers){
+			for (const i of listOfLecturers) {
 
 				wait(2000);
 				// setTimeout(function() {
-					parsePageData(i);
-				}
+				parsePageData(i);
+			}
 
 			resolve("Success");
 		} catch (err) {
