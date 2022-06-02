@@ -28,11 +28,12 @@ async function assessLecturer(listOfLecturers) {
 		let newWin = window.open(`
       ${window.location.href}/AssessmentForm?CourseCode=${data.attributes["data-coursecode"].textContent}
     `);
-		let submitButton = this.document.querySelector("button[type=submit]");
-		let list = Array.from(this.document.querySelectorAll(".form-group"));
 
 		newWin.addEventListener("DOMContentLoaded", function () {
 			let form = this.document.querySelector("form[action=SaveAssessment]");
+			let submitButton = this.document.querySelector("button[type=submit]");
+			let list = Array.from(this.document.querySelectorAll(".form-group"));
+
 			form.addEventListener("submit", function (event) {
 				event.preventDefault();
 				console.debug(event);
@@ -62,10 +63,11 @@ async function assessLecturer(listOfLecturers) {
 				parsePageData(i);
 			}
 
-			resolve("Success");
 		} catch (err) {
 			reject(`${err}: Error in selection`);
 		}
+		resolve("Success");
+
 		return;
 		// }, 2000);
 		// resolve(result); //if the action succeeded
