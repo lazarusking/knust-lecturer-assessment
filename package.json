@@ -5,19 +5,24 @@
   "main": "assessment.js",
   "dependencies": {
     "bookmarklet": "^3.0.0",
+    "create-wdio": "^7.1.1",
     "eslint": "^8.16.0",
-    "uglify-js": "^3.15.5"
+    "pattern.css": "^1.0.0",
+    "uglify-js": "^3.15.5",
+    "webdriverio": "^7.20.7"
   },
   "devDependencies": {
     "@babel/cli": "^7.17.10",
     "@babel/core": "^7.18.2",
-    "@babel/preset-env": "^7.18.2"
+    "@babel/preset-env": "^7.18.2",
+    "tailwindcss": "^3.1.5"
   },
   "scripts": {
     "uglify": "uglifyjs assessment.js -c drop_console=true -m -o ./dist/assess.min.js",
     "build": "babel assessment.js -d lib/babel.js",
     "bookmark": "bash ./build.sh",
     "bookmarklet": "bookmarklet ./dist/assess.min.js ./dist/bookmarklet.js",
+    "css": "npx tailwindcss -i ./index.css -o ./styles.css --minify --watch",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Lazarus",

@@ -1,2 +1,6 @@
 /node_modules/
 /test/
+/*.exe
+*.html
+*.css
+tailwind.config.js
